@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+   let minutes = prompt("Enter the number of minutes:");
+let hours = Math.floor(minutes / 60);
+let remainingMinutes = minutes % 60;
+
+if (remainingMinutes > 0) {
+  alert(hours + " hours and " + remainingMinutes + " minutes");
+} else {
+  alert("ONLY " + hours + " HOURS");
+}
+
+    </script>
+</body>
+</html>
