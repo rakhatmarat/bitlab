@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Authentication Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+    <input type="submit" value="Submit" id="submit-btn">
+  </form>
+
+  <div id="auth-message"></div>
+
+  <script>
+    const users = [
+      { login: "ilyas", password: "ilyas1" },
+      { login: "azamat", password: "azamat2" },
+      { login: "google", password: "google3" },
+    ];
+
+    function checkCredentials(login, password) {
+      for (let i = 0; i < users.length; i++) {
+        if (users[i].login === login && users[i].password === password) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    const submitButton = document.getElementById("submit-btn");
+    const authMessage = document.getElementById("auth-message");
+
+    submitButton.addEventListener("click", function(event) {
+      event.preventDefault(); 
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (checkCredentials(username, password)) {
+       
+        authMessage.textContent = "You are authenticated";
+        document.querySelector("form").style.display = "none";
+      } else {
+    
+        document.getElementById("username").style.borderColor = "red";
+        document.getElementById("password").style.borderColor = "red";
+      }
+    });
+  </script>
+
+</body>
+</html>

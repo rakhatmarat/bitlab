@@ -1,0 +1,33 @@
+.image-gallery {
+    position: relative;
+  }
+  
+  .gallery-container {
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .gallery-container img {
+    height: 100%;
+    width: auto;
+    display: block;
+  }
+  
+  .navigation-buttons {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navigation-buttons button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navigation-buttons button:hover {
+    background-color: #ccc;
+  }

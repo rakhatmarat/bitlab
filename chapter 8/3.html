@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment Form</title>
+	<link rel="stylesheet" href="3.css">
+</head>
+<body>
+	<form onsubmit="return validateForm()">
+		<label for="cardNumber">Card Number:</label>
+<input type="text" id="cardNumber1" maxlength="4">
+<input type="text" id="cardNumber2" maxlength="4">
+<input type="text" id="cardNumber3" maxlength="4">
+<input type="text" id="cardNumber4" maxlength="4">
+
+		<br><br>
+		<label for="firstName">First Name:</label>
+		<input type="text" id="firstName" name="firstName" required>
+		<br><br>
+		<label for="lastName">Last Name:</label>
+		<input type="text" id="lastName" name="lastName" required>
+		<br><br>
+		<label for="cvv">CVV Code:</label>
+		<input type="text" id="cvv" name="cvv" required maxlength="3">
+		<br><br>
+		<input type="submit" value="Complete">
+	</form>
+
+	<p id="result"></p>
+
+	<script>
+		function validateForm() {
+  var cardNumber1 = document.getElementById("cardNumber1").value;
+  var cardNumber2 = document.getElementById("cardNumber2").value;
+  var cardNumber3 = document.getElementById("cardNumber3").value;
+  var cardNumber4 = document.getElementById("cardNumber4").value;
+  var firstName = document.getElementById("firstName").value;
+  var lastName = document.getElementById("lastName").value;
+  var cvv = document.getElementById("cvv").value;
+
+  var cardNumber = cardNumber1 + cardNumber2 + cardNumber3 + cardNumber4;
+
+  if (cardNumber === "4413434135342424" && firstName === "ILYAS" && lastName === "ZHUANYSHEV" && cvv === "777") {
+    document.getElementById("result").innerHTML = "Transaction completed";
+    document.getElementById("result").className = "valid";
+  } else {
+    document.getElementById("result").innerHTML = "Invalid Data";
+    document.getElementById("result").className = "invalid";
+  }
+  return false;
+}
+
+	</script>
+</body>
+</html>

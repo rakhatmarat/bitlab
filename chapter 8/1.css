@@ -1,0 +1,38 @@
+form {
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid black;
+    display: inline-block;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    border: 2px solid gray;
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  #auth-message {
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid black;
+    display: none;
+  }
+  
