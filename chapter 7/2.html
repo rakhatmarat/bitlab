@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+let numbers = [];
+
+while (true) {
+  const input = prompt("Enter a number (or 0 to finish):");
+  const number = parseFloat(input);
+
+  if (isNaN(number)) {
+    alert("Invalid input. Please enter a number.");
+    continue;
+  }
+
+  if (number === 0) {
+    break;
+  }
+
+  numbers.push(number);
+}
+
+if (numbers.length === 0) {
+  alert("No numbers entered.");
+} else {
+  const product = numbers.reduce((acc, value) => acc * value);
+  const geometricMean = Math.pow(product, 1 / numbers.length);
+  alert(geometricMean.toFixed(3));
+}
+</script>
+    </body>
+    </html>
