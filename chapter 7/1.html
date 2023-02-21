@@ -1,0 +1,27 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+   const arr = [];
+const n = parseInt(prompt());
+
+for (let i = 0; i < n; i++) {
+  const element = parseInt(prompt());
+  arr.push(element);
+}
+const m = parseInt(prompt());
+
+if (arr.includes(m)) {
+  const index = arr.indexOf(m);
+  alert(`Yes ${index}`);
+} else {
+  alert('No');
+}
+
+        </script>
+    </body>
+    </html>
