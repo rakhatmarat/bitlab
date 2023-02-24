@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form action="submit-form.php" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+      
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6" required>
+      
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" minlength="6" required>
+      
+        <button type="submit">Register</button>
+      </form>
+      <script>
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+      
+        function validateForm() {
+          // Check if email is available
+          if (!isEmailAvailable(emailInput.value)) {
+            alert('This email is already in use.');
+            return false;
+          }
+      
+          // Check if password is at least 6 characters
+          if (passwordInput.value.length < 6) {
+            alert('Password must be at least 6 characters.');
+            return false;
+          }
+      
+          // Check if password and confirm password match
+          if (passwordInput.value !== confirmPasswordInput.value) {
+            alert('Password and confirm password must match.');
+            return false;
+          }
+      
+          // If everything is OK, submit the form
+          return true;
+        }
+      
+        function isEmailAvailable(email) {
+          // Check if email is available using an API or server-side validation
+          // Return true if available, false otherwise
+          // Example API call: fetch('/api/check-email', { method: 'POST', body: { email } })
+          return true;
+        }
+      
+        document.querySelector('form').addEventListener('submit', (event) => {
+          event.preventDefault();
+          if (validateForm()) {
+            event.target.submit();
+          }
+        });
+      </script>
+      
+</body>

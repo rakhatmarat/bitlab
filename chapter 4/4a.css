@@ -1,0 +1,100 @@
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 0px 10px ;
+    background-color:#00008B;
+    color: white;
+}
+.first{
+    display: flex; 
+    flex-wrap: wrap;
+    width: 25%; 
+    margin:10px;
+}
+.first :nth-child(2){
+    font-size: 25px;
+    margin:10px;
+}
+.first :nth-child(3){
+    color:grey;
+    text-align: center;
+    font-size: 15px;
+}
+.main {
+    width: 95%;
+}
+.first img {
+    width: 100%;
+}
+.first {
+    border: 1px grey solid;
+    width: 25%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item {
+    width: 23.55%;
+    border: 1px grey solid;
+    padding: 10px;
+    margin-left: 10px;
+  }
+  .second{
+    font-size: 25px;
+    margin-left: 380px;
+  }
+  .second :nth-child(2){
+    width: 65%;
+  }
+  .second :nth-child(3){
+    font-size: 17px;
+    margin-left:10px;
+  }
+  .second :nth-child(4){
+    display: flex;
+    margin: 10px;
+    padding: 10px 10px ;
+    background-color:#00008B;
+    color: white;
+    font-size: 17px;
+    width:80px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .second :nth-child(5){
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .second :nth-child(6){
+    width: 65%;
+  }
+  .second :nth-child(7){
+    font-size: 17px;
+    margin-left:10px;
+  }
+  .second :nth-child(8){
+    display: flex;
+    margin: 10px;
+    padding: 10px 10px ;
+    background-color:#00008B;
+    color: white;
+    font-size: 17px;
+    width:80px;
+    text-align: center;
+  }
+  .container2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 23.55%;
+    border: 1px grey solid;
+    padding: 10px;
+    margin-left: 1050px;
+  }

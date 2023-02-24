@@ -8,7 +8,8 @@
   }
   
   .gallery-container img {
-    height: 100%;
+    margin-left: 320px;
+    height: 420px;
     width: auto;
     display: block;
   }
@@ -22,12 +23,13 @@
   
   .navigation-buttons button {
     font-size: 16px;
+    color: white;
     padding: 10px 20px;
-    background-color: #eee;
+    background-color: black;
     border: none;
     cursor: pointer;
   }
   
   .navigation-buttons button:hover {
-    background-color: #ccc;
+    background-color: black;
   }
